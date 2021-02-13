@@ -2,6 +2,7 @@
   "name": "@mtth/eslint-plugin",
   "version": "0.1.2",
   "description": "Common linting configuration",
+  "homepage": "https://github.com/mtth/eslint-plugin",
   "keywords": [
     "eslint"
   ],
@@ -17,5 +18,9 @@
   "peerDependencies": {
     "eslint": "^7.1.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mtth/eslint-plugin.git"
+  },
 }
