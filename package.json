@@ -1,6 +1,6 @@
 {
   "name": "@mtth/eslint-plugin",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Common linting configuration",
   "homepage": "https://github.com/mtth/eslint-plugin",
   "keywords": [
@@ -22,5 +22,5 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/mtth/eslint-plugin.git"
-  },
+  }
 }
