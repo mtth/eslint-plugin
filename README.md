@@ -24,3 +24,31 @@ module.exports = {
 
 + `typescript`, defaults for a TypeScript project. The corresponding parser is
   included in the plugin.
+
+## Next steps
+
+This plugin is best used in combination with [this prettier
+configuration](https://github.com/mtth/prettier-typescript) and the following
+convenience scripts:
+
++ `fix`: `prettier --write 'src/**/*.ts' 'test/**/*.ts' && npm run lint -- --fix`
++ `lint`: `eslint 'src/**/*.ts' 'test/**/*.ts'`
+
+We also recommend enabling pre-commit hooks with `husky` and `lint-staged`. For
+example, within your `package.json`:
+
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
+```
