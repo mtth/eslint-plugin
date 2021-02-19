@@ -54,7 +54,6 @@ jobs:
       - name: Install
         run: npm i
       - name: Publish to GitHub
-        if: steps.check-tag.outputs.exists == 'false'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -75,7 +74,6 @@ jobs:
       - name: Install
         run: npm i
       - name: Publish to NPM
-        if: steps.check-tag.outputs.exists == 'false'
         run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
