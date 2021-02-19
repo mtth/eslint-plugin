@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     outputs:
-      tagged: ${{ steps.check-tags.outputs.exists == 'false' }}
+      tagged: ${{ format(steps.check-tags.outputs.exists == 'false') }}
     steps:
       - name: Check out
         uses: actions/checkout@v2
