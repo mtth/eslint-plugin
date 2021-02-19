@@ -31,8 +31,13 @@ This plugin is best used in combination with [this prettier
 configuration](https://github.com/mtth/prettier-typescript) and the following
 convenience scripts:
 
-+ `fix`: `prettier --write 'src/**/*.ts' 'test/**/*.ts' && npm run lint -- --fix`
-+ `lint`: `eslint 'src/**/*.ts' 'test/**/*.ts'`
+```json
+{
+  "fix": "npm run pretty && npm run lint -- --fix",
+  "lint": "eslint '{src,test}/**/*.{ts,tsx}'",
+  "pretty": "prettier --write '{src,test}/**/*.{ts,tsx}'"
+}
+```
 
 We also recommend enabling pre-commit hooks with `husky` and `lint-staged`. For
 example, within your `package.json`:
