@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     needs: tag
-    if: needs.tag.outputs.tagged
+    if: needs.tag.outputs.tagged == 'true'
     steps:
       - name: Check out
         uses: actions/checkout@v2
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     needs: tag
-    if: needs.tag.outputs.tagged
+    if: needs.tag.outputs.tagged == 'true'
     steps:
       - name: Check out
         uses: actions/checkout@v2
