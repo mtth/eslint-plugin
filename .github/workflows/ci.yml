@@ -42,7 +42,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     needs: tag
-    if: needs.tag.outputs.tagged == 'true'
     steps:
       - name: Check out
         uses: actions/checkout@v2
@@ -51,6 +50,10 @@ jobs:
         with:
           node-version: 15.x
           registry-url: https://npm.pkg.github.com
+      - name: Test
+        run: echo "$TAGGED"
+        env:
+          TAGGED: ${{ needs.tag.outputs.tagged }}
       - name: Install
         run: npm i
       - name: Publish to GitHub
@@ -62,7 +65,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     needs: tag
-    if: needs.tag.outputs.tagged == 'true'
     steps:
       - name: Check out
         uses: actions/checkout@v2
