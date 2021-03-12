@@ -41,7 +41,14 @@ module.exports = {
         'dot-location': ['error', 'property'],
         'dot-notation': 'error',
         'eqeqeq': ['error', 'smart'],
-        'max-len': ['error', {ignoreUrls: true}],
+        'max-len': [
+          'error',
+          {
+            ignorePattern: 'eslint-disable',
+            ignoreTrailingComments: true,
+            ignoreUrls: true,
+          },
+        ],
         'no-alert': 'error',
         'no-caller': 'error',
         'no-constructor-return': 'error',
