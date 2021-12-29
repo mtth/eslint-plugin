@@ -11,15 +11,17 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
       ],
       rules: {
-        '@typescript-eslint/array-type': [
-          'error',
-          {default: 'array', readonly: 'generic'},
+        '@typescript-eslint/array-type': ['error', {
+          default: 'array',
+          readonly: 'generic',
+        }],
+        '@typescript-eslint/consistent-type-assertions': ['error', {
+          assertionStyle: 'as',
+          objectLiteralTypeAssertions: 'never',
+        }],
+        '@typescript-eslint/consistent-type-definitions': ['error',
+          'interface',
         ],
-        '@typescript-eslint/consistent-type-assertions': [
-          'error',
-          {assertionStyle: 'as', objectLiteralTypeAssertions: 'never'},
-        ],
-        '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/member-delimiter-style': 'error',
         '@typescript-eslint/no-explicit-any': 'off',
@@ -35,20 +37,24 @@ module.exports = {
         '@typescript-eslint/unified-signatures': 'error',
         'arrow-parens': 'error',
         'consistent-return': 'error',
+        'comma-dangle': ['error', {
+          'arrays': 'always-multiline',
+          'objects': 'always-multiline',
+          'imports': 'always-multiline',
+          'exports': 'always-multiline',
+          'functions': 'never',
+        }],
         'curly': 'error',
         'default-case-last': 'error',
         'default-param-last': 'error',
         'dot-location': ['error', 'property'],
-        'dot-notation': 'error',
+        'dot-notation': 'off', // https://234.fyi/1PcbRPGcR
         'eqeqeq': ['error', 'smart'],
-        'max-len': [
-          'error',
-          {
-            ignorePattern: 'eslint-disable',
-            ignoreTrailingComments: true,
-            ignoreUrls: true,
-          },
-        ],
+        'max-len': ['error', {
+          ignorePattern: 'eslint-disable',
+          ignoreTrailingComments: true,
+          ignoreUrls: true,
+        }],
         'no-alert': 'error',
         'no-caller': 'error',
         'no-constructor-return': 'error',
