@@ -27,9 +27,6 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-this-alias': 'error',
-        '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-        '@typescript-eslint/no-unnecessary-condition': 'error',
-        '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-unused-vars': ['error', {
           argsIgnorePattern: '^_',
           caughtErrors: 'all',
