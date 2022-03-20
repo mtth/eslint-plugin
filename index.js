@@ -105,7 +105,7 @@ module.exports = {
         'object-shorthand': ['error', 'always', {avoidQuotes: true}],
         'prefer-const': 'error',
         'radix': 'error',
-        'require-await': 'error',
+        'require-await': 'off',
         'simple-import-sort/exports': 'error',
         'simple-import-sort/imports': 'error',
         'sort-imports': 'off',
